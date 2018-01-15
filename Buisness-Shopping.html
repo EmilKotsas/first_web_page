@@ -1,51 +1,73 @@
-	<html>
+<?php    
+		
+	session_start();
+    $connect = mysqli_connect("localhost", "root", "", "test");	
+		
+	?>	
+		
+    <html>		
+	
 	<ul>
-	     <li><a>Phones</a></li>
+	     <li><a>Phones</a>		
+		     <ul>
+	             <li><a>Xiaomi</a></li>
+	             <li><a>Apple</a></li>
+	             <li><a>Samsung</a></li>
+                 <li><a>Le max</a></li>				 
+	         </ul>		
+	     </li>	
 	     <li><a>Laptops</a>		
 		     <ul>
-	             <li><a>Our Team</a></li>
-	             <li><a>Iphone</a></li>
-	             <li><a>Samsung &amp; Vision</a></li>
-	             <li><a>Xiaomi</a></li>	   
+	             <li><a>Mac</a></li>
+	             <li><a>Apple</a></li>
+	             <li><a>Windows</a></li>	            	   
 	         </ul>		
 	     </li>
 		 <li><a>Accessories</a>
 		     <ul>
-	             <li><a>Activities</a></li>
-	             <li><a>Shops</a></li>
-	             <li><a>Parks</a></li>
-	             <li><a>Events</a></li>	   
+	             <li><a>Hdmi</a></li>
+	             <li><a>VGA</a></li>
+	             <li><a>DVI</a></li>	           	   
 	         </ul>  
 		 </li>
 	     <li><a>Gaming</a>
              <ul>
-	             <li><a>Map</a></li>
-	             <li><a>Directions</a></li>
+	             <li><a>PC</a></li>
+	             <li><a>PS4</a></li>
+				 <li><a>Gaming Mouse</a></li>
+				
 	               
 	         </ul>	
 		 </li>
-	     <li><a>Tablets</a></li>
+	     	     <li><a>Tablets</a>
+             <ul>
+	             <li><a>Apple</a></li>
+	             <li><a>Samsung</a></li>
+				 <li><a>Huawei</a></li>
+				
+	               
+	         </ul>	
+		 </li>
 	<head>
+
 
 	<title> Shopping </title>
 	<style>
 	
-	
-
+		
 	body {
-	    background: url('nature.jpg') no-repeat;
-		background-size: cover;
-		font-family: Arial;
-		color: white;
-	}
+	   background-color: gray;
+
+   }	
+	
     ul {
         margin: 0px;
         padding: 0px;
 		list-style: none;
     }
 	ul li {
-	    float: left;
-		width: 200px;
+	    float: right;
+		width: 360.99px;
 		height: 40px;
 		background-color: black;
 		opacity: .8;
@@ -119,16 +141,16 @@
 	</head>
 	<center>
 	<body>
+	<br />
+	<div class="container" style="width:700px;">
+	    <h3 align="center">Shopping Cart</h3><br />
+		<?php
+		$query = "SELECT * FROM tbl_product ORDER BY id ASC"
+		?>
 
-	  
-	<div 
-	</div> 
-	  
+	
 		
 
-	<form class ="search-form">
-	   <input type ="next" placeholder="Search"></input>
-	   <button> Search</button>	
 
 			  
 		 </form>
